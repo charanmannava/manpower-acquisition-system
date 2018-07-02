@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="IndividualLoginBean" type="ProjectSourceFolder.IndividualLoginBean"/>
+        <form-bean name="ResultBean" type="ProjectSourceFolder.ResultBean"/>
+        <form-bean name="OpportunitiesAvailableBean" type="ProjectSourceFolder.OpportunitiesAvailableBean"/>
+        <form-bean name="OpportunityBean" type="ProjectSourceFolder.OpportunityBean"/>
+        <form-bean name="IndividualRegisterBean" type="ProjectSourceFolder.IndividualRegisterBean"/>
+        <form-bean name="DeleteUniversityBean" type="ProjectSourceFolder.DeleteUniversityBean"/>
+        <form-bean name="DeleteCompanyBean" type="ProjectSourceFolder.DeleteCompanyBean"/>
+        <form-bean name="AdminLoginBean" type="ProjectSourceFolder.AdminLoginBean"/>
+        <form-bean name="UpdateCompanyBean" type="ProjectSourceFolder.UpdateCompanyBean"/>
+        <form-bean name="CompanyLoginBean" type="ProjectSourceFolder.CompanyLoginBean"/>
+        <form-bean name="UniversityRegisterBean" type="ProjectSourceFolder.UniversityRegisterBean"/>
+        <form-bean name="CompanyRegisterBean" type="ProjectSourceFolder.CompanyRegisterBean"/>
+    
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+    </global-forwards>
+
+    <action-mappings>
+        <action input="/CompanyRegister.jsp" name="CompanyRegisterBean" path="/compreg" scope="session" type="ProjectSourceFolder.CompanyRegisterAction">
+        <forward name="pass" path="regcomppass"/>
+        <forward name="fail" path="regcompfail"/>
+        </action>
+        
+        <action input="/UniversityRegister.jsp" name="UniversityRegisterBean" path="/univereg" scope="session" type="ProjectSourceFolder.UniversityRegisterAction">
+        <forward name="pass" path="regunivpass"/>
+        <forward name="fail" path="regunivfail"/>
+        </action>
+        
+        <action input="/UpdateCompany.jsp" name="UpdateCompanyBean" path="/updcomp" scope="session" type="ProjectSourceFolder.UpdateCompanyAction">
+        <forward name="pass" path="updcomppass"/>
+        <forward name="fail" path="updcompfail"/>
+        </action>
+ 
+        <action input="/CompanyLogin.jsp" name="CompanyLoginBean" path="/complog" scope="session" type="ProjectSourceFolder.CompanyLoginAction">
+        <forward name="pass" path="compinfopass"/>
+        <forward name="fail" path="complogfail"/>
+        </action>
+        
+        <action input="/AdminLogin.jsp" name="AdminLoginBean" path="/adminlog" scope="session" type="ProjectSourceFolder.AdminLoginAction">
+        <forward name="pass" path="homadmi"/>
+        <forward name="fail" path="adlogfail"/>        
+        </action>
+        
+        <action input="/DeleteCompany.jsp" name="DeleteCompanyBean" path="/delcomp" scope="session" type="ProjectSourceFolder.DeleteCompanyAction">
+        <forward name="pass" path="delcomppass"/>
+        <forward name="fail" path="delcomplog"/>           
+        </action>
+        
+        <action input="/DeleteUniversity.jsp" name="DeleteUniversityBean" path="/deluniv" scope="session" type="ProjectSourceFolder.DeleteUniversityAction">
+        <forward name="pass" path="delunivpass"/>
+        <forward name="fail" path="delunivlog"/>                   
+        </action>
+        
+        <action input="/IndividualRegister.jsp" name="IndividualRegisterBean" path="/indivreg" scope="session" type="ProjectSourceFolder.IndividualRegisterAction">
+        <forward name="pass" path="indregpass"/>
+        <forward name="fail" path="indregfail"/>                           
+        </action>
+        
+        <action input="/Opportunity.jsp" name="OpportunityBean" path="/oppo" scope="session" type="ProjectSourceFolder.OpportunityAction">
+        <forward name="pass" path="oppregpass"/>
+        <forward name="fail" path="oppregfail"/>                                   
+        </action>
+        
+        <action input="/Results.jsp" name="ResultBean" path="/resultslog" scope="session" type="ProjectSourceFolder.ResultsAction">
+        <forward name="pass" path="reslogpass"/>
+        <forward name="fail" path="reslogfail"/>                                           
+        </action>
+        
+        <action input="/IndividualLogin.jsp" name="IndividualLoginBean" path="/indivlog" scope="session" type="ProjectSourceFolder.IndividualLoginAction">
+        <forward name="pass" path="indlogpass"/>
+        <forward name="fail" path="indlogfail"/>                                                   
+        </action>
+        
+        <action path="/comp" forward="gocomp"/>
+        <action path="/univ" forward="gouniv"/>
+        <action path="/hom" forward="gohome"/>
+        <action path="/neo" forward="goneo"/>
+        <action path="/res" forward="gores"/>
+        <action path="/contact" forward="gocont"/>
+        <action path="/reg" forward="goreg"/>
+        <action path="/int" forward="goint"/>
+        <action path="/adlog" forward="goadmin"/>
+        <action path="/unilog" forward="gounilog"/>
+        <action path="/comlog" forward="gocomlog"/>
+        <action path="/indlog" forward="goindlog"/>
+     
+        <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+    </action-mappings>
+    
+    
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

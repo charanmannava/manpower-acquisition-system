@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+
+<tiles-definitions>
+    <definition name="main" path="/Layout.jsp">
+        <put name="header" value="/Header.jsp"/>
+        <put name="footer" value="/Footer.jsp"/>
+        <put name="menu" value="/Menu.jsp"/>
+        <put name="body" value="/Body.jsp"/>
+        <put name="topmenu" value="/Topmenu.jsp"/>
+    </definition>
+
+    <definition name="goregi" extends="main">
+        <put name="body" value="/Register.jsp"/>
+    </definition>
+        
+    <definition name="regcomppass" extends="main">
+        <put name="body" value="/CompanyRegisterSuccess.jsp"/>
+    </definition>
+    
+    <definition name="regcompfail" extends="main">
+        <put name="body" value="/CompanyRegister.jsp"/>
+    </definition>
+
+    <definition name="gocomp" extends="main">
+        <put name="body" value="/CompanyRegister.jsp"/>
+    </definition>
+        
+    <definition name="gouniv" extends="main">
+        <put name="body" value="/UniversityRegister.jsp"/>
+    </definition>
+
+    <definition name="regunivpass" extends="main">
+        <put name="body" value="/UniversityRegisterSuccess.jsp"/>
+    </definition>
+    
+    <definition name="regunivfail" extends="main">
+        <put name="body" value="/UniversityRegister.jsp"/>
+    </definition>
+ 
+    <definition name="gohom" extends="main">
+        <put name="body" value="/Home.jsp"/>
+    </definition>
+ 
+    <definition name="goneo" extends="main">
+        <put name="body" value="/Opportunity.jsp"/>
+    </definition>
+ 
+    <definition name="gores" extends="main">
+        <put name="body" value="/Results.jsp"/>
+    </definition>
+                            
+    <definition name="gocont" extends="main">
+        <put name="body" value="/Contact.jsp"/>
+    </definition>
+                   
+    <definition name="goreg" extends="main">
+        <put name="body" value="/Register.jsp"/>
+    </definition>
+                                        
+    <definition name="goindlog" extends="main">
+        <put name="body" value="/IndividualLogin.jsp"/>
+    </definition>
+    
+    <definition name="gounilog" extends="main">
+        <put name="body" value="/UniversityLogin.jsp"/>
+    </definition>
+     
+    <definition name="gocomlog" extends="main">
+        <put name="body" value="/CompanyLogin.jsp"/>
+    </definition>
+    
+    <definition name="goadmin" extends="main">
+        <put name="body" value="/AdminLogin.jsp"/>
+    </definition>
+     
+    <definition name="goint" extends="main">
+        <put name="body" value="/Interview.jsp"/>
+    </definition>
+
+    <definition name="complogpass" extends="main">
+        <put name="body" value="/CompanyInformation.jsp"/>
+    </definition>
+
+    <definition name="complogfail" extends="main">
+        <put name="body" value="/CompanyLogin.jsp"/>
+    </definition>
+    
+    <definition name="updcompfail" extends="main">
+        <put name="body" value="/UpdateCompany.jsp"/>
+    </definition>
+    
+    <definition name="adlogfail" extends="main">
+        <put name="body" value="/AdminLogin.jsp"/>
+    </definition>
+                        
+    <definition name="delcomplog" extends="main">
+        <put name="body" value="/DeleteCompany.jsp"/>
+    </definition>
+      
+    <definition name="delunivlog" extends="main">
+        <put name="body" value="/DeleteUniversity.jsp"/>
+    </definition>
+
+     <definition name="indregfail" extends="main">
+        <put name="body" value="/IndividualRegister.jsp"/>
+    </definition>
+ 
+     <definition name="oppregfail" extends="main">
+        <put name="body" value="/Opportunity.jsp"/>
+    </definition>
+
+     <definition name="reslogfail" extends="main">
+        <put name="body" value="/Results.jsp"/>
+    </definition>
+
+     <definition name="updcomppass" extends="main">
+        <put name="body" value="/UpdateCompanySuccess.jsp"/>
+    </definition>
+    
+     <definition name="compinfopass" extends="main">
+        <put name="body" value="/CompanyInformation.jsp"/>
+    </definition>
+    
+     <definition name="homadmi" extends="main">
+        <put name="body" value="/HomAdmin.jsp"/>
+    </definition>
+    
+     <definition name="delcomppass" extends="main">
+        <put name="body" value="/DeleteCompanySuccess.jsp"/>
+    </definition>
+
+     <definition name="delunivpass" extends="main">
+        <put name="body" value="/DeleteUniversitySuccess.jsp"/>
+    </definition>
+    
+    <definition name="indregpass" extends="main">
+        <put name="body" value="/IndividualRegisterSuccess.jsp"/>
+    </definition>
+
+     <definition name="oppregpass" extends="main">
+        <put name="body" value="/OpportunityRegisterSuccess.jsp"/>
+    </definition>
+
+     <definition name="reslogpass" extends="main">
+        <put name="body" value="/ResultsAvailable.jsp"/>
+    </definition>
+
+     <definition name="gocomlog" extends="main">
+        <put name="body" value="/CompanyLogin.jsp"/>
+    </definition>
+
+     <definition name="gounilog" extends="main">
+        <put name="body" value="/UniversityLogin.jsp"/>
+    </definition>
+
+     <definition name="goindlog" extends="main">
+        <put name="body" value="/IndividualLogin.jsp"/>
+    </definition>
+    
+     <definition name="goadmin" extends="main">
+        <put name="body" value="/AdminLogin.jsp"/>
+    </definition>
+
+     <definition name="gocont" extends="main">
+        <put name="body" value="/Contact.jsp"/>
+    </definition>  
+    
+     <definition name="gores" extends="main">
+        <put name="body" value="/ResultsAvailable.jsp"/>
+    </definition>
+    
+     <definition name="gouniv" extends="main">
+        <put name="body" value="/UniversityRegister.jsp"/>
+    </definition>
+    
+     <definition name="gocomp" extends="main">
+        <put name="body" value="/CompanyRegister.jsp"/>
+    </definition>
+     
+     <definition name="goint" extends="main">
+        <put name="body" value="/Interview.jsp"/>
+    </definition>
+        
+     <definition name="goneo" extends="main">
+        <put name="body" value="/OpportunitiesAvailable.jsp"/>
+    </definition>
+                                              
+     <definition name="indlogpass" extends="main">
+        <put name="body" value="/IndividualInformation.jsp"/>
+    </definition>
+
+     <definition name="indlogfail" extends="main">
+        <put name="body" value="/IndividualLogin.jsp"/>
+    </definition>
+
+    <!-- sample tiles definitions
+    <definition name=".mainLayout" path="/common/layouts/classicLayout.jsp">
+        <put name="title"  value="Sample Page Title" />
+        <put name="header" value="/common/header.jsp" />
+        <put name="menu"   value=".mainMenu" />
+        <put name="footer" value="/common/footer.jsp" />
+        <put name="body"   value=".portal.body" />
+    </definition>
+
+    <definition name=".mainMenu" path="/common/layouts/vboxLayout.jsp" >
+        <putList name="list" >
+            <add value=".menu.links" />
+            <add value=".menu.taglib.references" />
+            <add value=".menu.printer.friendly" />
+            <add value=".menu.old.documents" />
+      </putList>
+    </definition>
+
+    <definition name="aPage" extends=".mainLayout">
+        <put name="title"  value="Another Title" />
+        <put name="body"   value=".aPage.body" />
+    </definition>
+
+    end samples -->
+
+    <definition name="${YOUR_DEFINITION_HERE}">
+    </definition>
+
+</tiles-definitions>
