@@ -12,6 +12,7 @@ of page like header, footer top menu and body. So, I can update the layout of di
 separate module for showing the result of recruitment process and Interviews which make it easier for the company and University to schedule their time. Thus, as a whole it will
 renovate the lengthier present system with much effective and efficient mechanism of recruitment process.
 
+## Working Description
 
 ### Basic Flow 
 jsp ->  
@@ -36,8 +37,11 @@ Each action class has inherited the action package from the struts framework. He
 Then there is database connection in the action classes to update the information in the databases. For this, I have used MySql JDBC driver. 
 
 ### Database Connectivity
+
 (DriverManager.getConnection) for getting connection
+
 (createStatement) for sql statement
+
 (executeQuery()) for executing the sql query
 
 ### Tiles
