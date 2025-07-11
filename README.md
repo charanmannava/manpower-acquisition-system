@@ -1,5 +1,5 @@
 # Manpower-Acquisition-Planning-System
-
+ 
 This project is designed and developed for any educational universities or colleges for making recruitment process. The system is designed by keeping in mind
 both parties like colleges/universities and MNC companies. This system allows placement officers(Applicants) to register his/her details along with colleges/universities
 details & to post the student's resumes based on the opportunities in the companies. And also job providers can post their requirements in the system. This makes the recruitment
@@ -46,3 +46,9 @@ Then there is database connection in the action classes to update the informatio
 
 ### Tiles
 In the tiles firstly, there is a definition of the all the menus including header, footer, topmenu, body. After that all the subsequent pages inherit that tiles form and do the changes in their menus like for a new jsp page we just change the body menu and rest all the menus header, footer remains same. In this way we don't have to explicitly define menu for each of the pages.  
+
+
+### team members:
+KOSURI SAI SRUTHI - 2200050038
+BODAVULA LALITHA ROHITH - 2200050022
+MANNAVA SAINADH CHARAN - 2200050031
